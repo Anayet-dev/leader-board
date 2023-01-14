@@ -32,7 +32,52 @@ h2 {
     margin-bottom: 35px;
 }
 
+/* Navbar styles */
+
+.header {
+    background-color: #562EFF;
+    margin-bottom: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    width: 10%;
+}
+
+.logo img {
+    width: 100%;
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+.profile {
+    display: inline-block;
+}
+
+
+.nav-item a {
+    text-decoration: none;
+    color: #F3F1FF;
+    border-bottom: 1px solid rgb(86, 46, 255, 0);
+}
+
+.nav-item a:hover {
+    border-bottom: 1px solid rgb(46, 143, 255);
+}
+
 /* Top Players styles */
+
 .top-players {
     background-color: #fff;
 }
@@ -100,7 +145,8 @@ hr {
 
 .courses {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    gap: 50px;
 }
 
 .course p {
@@ -110,16 +156,65 @@ hr {
 
 .course img {
     margin-bottom: 20px;
-    width: 80%;
+    width: 100%;
 }
 
 .review i {
     color: #FFC014;
 }
+
+.review i:nth-child(5) {
+    color: #9F9F9F;
+}
 .review-number {
     color: #9F9F9F;
+    margin: 0 25px 0 10px;
 }
 .review-duration {
     background-color: #FFE4E8;
     color: #FF4A60;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.review-duration i {
+    color: #FF4A60;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 576px) {
+    a {
+        font-size: 0.8em;
+    }
+    h2 {
+        font-size: 1em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    h4 {
+        font-size: 0.7em;
+    }
+    
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+    }
+
+    .logo {
+        margin-right: 10px;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .courses {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 50px;
+    }
 }
